@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useState,useEffect} from 'react';
+import { FormControl, Select, MenuItem} from '@material-ui/core'
 import './App.css';
 
 function App() {
+  const countries= useState(['americca'])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+     <div className="app__header">
+     <h1>What is Uppp!</h1>
+     <FormControl className="app__dropdown">
+     <Select variant="outlined" value="abc">
+      <MenuItem value="abc">{countries}</MenuItem>
+     </Select>
+     </FormControl>
+     </div>
     </div>
   );
 }
